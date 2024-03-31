@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CookieTastic</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    color: orange;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .cookie-configurator {
+    background-color: lightgrey;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .order-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: orange;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .order-button:hover {
+    background-color: #ff6600;
+  }
+
+  .thank-you-message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+    color: green;
+    display: none;
+  }
+  h6 {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1><a href="index.html">CookieTastic</a></h1>
+  
+  <div class="cookie-configurator">
+    <h2>Cookie Configurator</h2>
+    <div class="form-group">
+      <label for="cookie-type">Cookie Type:</label>
+      <select id="cookie-type">
+        <option value="chocolate-chip">Chocolate Chip</option>
+        <option value="oatmeal-raisin">Oatmeal Raisin</option>
+        <option value="sugar">Sugar</option>
+        <option value="peanut-butter">Peanut Butter</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="toppings">Toppings:</label>
+      <input type="text" id="toppings" placeholder="Enter toppings separated by commas">
+    </div>
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input type="text" id="price" placeholder="Enter price">
+    </div>
+    <button class="order-button" onclick="showOrderForm()">Order Now</button>
+    <div class="thank-you-message" id="thank-you-message">Order Placed. Thank you!</div>
+  </div>
+  
+  <div id="order-form" style="display: none;">
+    <h2>Order Form</h2>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-group">
+      <label for="delivery-location">Delivery Location:</label>
+      <input type="text" id="delivery-location" placeholder="Enter delivery location">
+    </div>
+    <button class="order-button" onclick="submitOrder()">Place Order</button>
+  </div>
+</div>
+
+<script>
+  function showOrderForm() {
+    document.getElementById('order-form').style.display = 'block';
+  }
+  
+  function submitOrder() {
+    document.getElementById('thank-you-message').style.display = 'block';
+  }
+</script>
+<h6>Copyright GABEEEEEEEEEEEEEEEEEE™</h6>
+</body>
+</html>
